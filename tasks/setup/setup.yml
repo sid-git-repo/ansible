@@ -8,7 +8,7 @@
        win_shell: java -jar jenkins.war
        args:
          executable: cmd
-         chdir: D:\destros\jenkins\
+         chdir: 'D:\destros\jenkins\'
        become: yes
        register: jenkinslog
 
@@ -23,7 +23,7 @@
        win_shell: StartSonar.bat
        args:
          executable: cmd
-         chdir: D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\
+         chdir: 'D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\'
        become: yes
        register: sonarlog
 
