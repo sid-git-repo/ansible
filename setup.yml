@@ -5,7 +5,7 @@
 
   tasks: 
     -  name: jenkins setup(192.168.0.111:8080)
-       win_shell: java -jar jenkins.war
+       win_command: java -jar jenkins.war
        args:
          executable: cmd
          chdir: 'D:\destros\jenkins\'
