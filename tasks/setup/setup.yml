@@ -6,7 +6,7 @@
   tasks: 
     -  name: jenkins setup(192.168.0.111:8080)
        win_shell: D:\destros\jenkins\java -jar jenkins.war
-       #become: yes
+       become: yes
        register: jenkinslog
 
     -  name: debug
@@ -18,7 +18,7 @@
 
     -  name: sonar setup(192.168.0.111:9000)
        win_shell: D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\StartSonar.bat
-       #become: yes
+       become: yes
        register: sonarlog
 
     -  name: debug
