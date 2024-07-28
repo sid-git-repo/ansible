@@ -1,6 +1,6 @@
 ---
 - name: setup tool
-  hosts: localhost
+  hosts: host
   gather_facts: yes
 
 
