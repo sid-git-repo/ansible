@@ -1,6 +1,6 @@
 ---
 - name: setup tool
-  hosts: host
+  hosts: windows
   gather_facts: yes
 
 
