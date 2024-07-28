@@ -1,0 +1,36 @@
+---
+- name: setup tool
+  hosts: localhost
+
+
+  tasks: 
+    -  name: jenkins setup(192.168.0.111:8080)
+       win_shell: java -jar jenkins.war
+       args:
+         executable: cmd
+         chdir: 'D:\destros\jenkins\'
+       #become: yes
+       register: jenkinslog
+
+    -  name: debug
+       debug: 
+         msg: "(jenkinslog)"
+
+       
+
+
+    -  name: sonar setup(192.168.0.111:9000)
+       win_command: D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\StartSonar.bat
+      #  args:
+      #    executable: cmd
+      #    chdir: 'D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\'
+       #become: yes
+       register: sonarlog
+
+    -  name: debug
+       debug: 
+         msg: "(sonarlog)"
+
+  
+    
+     
