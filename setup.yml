@@ -4,17 +4,17 @@
 
 
   tasks: 
-    # -  name: jenkins setup(192.168.0.111:8080)
-    #    win_shell: java -jar jenkins.war
-    #    args:
-    #      executable: cmd
-    #      chdir: 'D:\destros\jenkins\'
-    #    #become: yes
-    #    register: jenkinslog
+    -  name: jenkins setup(192.168.0.111:8080)
+       win_shell: java -jar jenkins.war
+       args:
+         executable: cmd
+         chdir: 'D:\destros\jenkins\'
+       #become: yes
+       register: jenkinslog
 
-    # -  name: debug
-    #    debug: 
-    #      msg: "(jenkinslog)"
+    -  name: debug
+       debug: 
+         msg: "{{jenkinslog}}"
 
        
 
@@ -29,7 +29,7 @@
 
     -  name: debug
        debug: 
-         msg: "(sonarlog)"
+         msg: "{{sonarlog}}"
 
   
     
