@@ -5,7 +5,7 @@
 
   tasks: 
     -  name: jenkins setup(192.168.0.111:8080)
-       ansible.windows.win_shell: java -jar jenkins.war
+       win_shell: java -jar jenkins.war
        args:
          executable: cmd
          chdir: D:\destros\jenkins\
@@ -20,7 +20,7 @@
 
 
     -  name: sonar setup(192.168.0.111:9000)
-       ansible.windows.win_shell: StartSonar.bat
+       win_shell: StartSonar.bat
        args:
          executable: cmd
          chdir: D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\
