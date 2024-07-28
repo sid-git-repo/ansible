@@ -2,7 +2,7 @@
 windows_host ansible_host=192.168.0.111
 
 [windows:vars]
-ansible_user=your_username
-ansible_password=your_password
+ansible_user=adminstrator
+ansible_password=''
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
