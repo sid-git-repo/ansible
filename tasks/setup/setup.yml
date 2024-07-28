@@ -11,7 +11,7 @@
 
     -  name: debug
        debug: 
-       msg: "(jenkinlog)"
+       msg: "(jenkinslog)"
 
        
 
