@@ -1,0 +1,23 @@
+---
+- name: setuptool
+  hosts: localhost
+  gather_facts: true
+  
+  tasks:
+  -  name: jenkins setup (192.168.0.111:8080)
+     win_shell: "" 
+     register: jensinslog
+     become: yes
+
+
+-  name: debug jensinslog
+   debug: msg "{{jensinslog}}"
+   
+-  name: sonarsetup (192.168.0.111:9000)
+   win_shell: ""
+   register: sonarout
+   become: yes
+
+
+-  name: debug sonarout
+   debug: msg "{{stdosonaroutut}}"

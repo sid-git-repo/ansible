@@ -1,1 +1,5 @@
 # ansible
+
+#setup 
+-jenkins
+-sonar
