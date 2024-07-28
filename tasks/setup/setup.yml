@@ -11,7 +11,7 @@
 
     -  name: debug
        debug: 
-       msg: "(jenkinslog)"
+         msg: "(jenkinslog)"
 
        
 
@@ -23,7 +23,7 @@
 
     -  name: debug
        debug: 
-       msg: "(sonarlog)"
+         msg: "(sonarlog)"
 
   
     
