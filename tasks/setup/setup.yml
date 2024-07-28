@@ -5,7 +5,7 @@
 
   tasks: 
     -  name: jenkins setup(192.168.0.111:8080)
-       win_shell: D:\destros\jenkins\java -r jenkins.war
+       win_shell: D:\destros\jenkins\java -jar jenkins.war
        #become: yes
        register: jenkinslog
 
