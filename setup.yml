@@ -5,6 +5,13 @@
 
 
   tasks: 
+    - name: Gather windows system facts
+      setup:
+
+    - name: Print gathered facts
+      debug:
+        msg: "{{ ansible_facts }}"
+
     -  name: jenkins setup(192.168.0.111:8080)
        win_command: java -jar jenkins.war
        args:
