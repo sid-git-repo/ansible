@@ -9,7 +9,7 @@
        args:
          executable: cmd
          chdir: 'D:\destros\jenkins\'
-       become: yes
+       #become: yes
        register: jenkinslog
 
     -  name: debug
@@ -24,7 +24,7 @@
        args:
          executable: cmd
          chdir: 'D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\'
-       become: yes
+       #become: yes
        register: sonarlog
 
     -  name: debug
