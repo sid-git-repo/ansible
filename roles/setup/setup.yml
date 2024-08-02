@@ -4,12 +4,11 @@
 
 
   tasks: 
-    -  name: jenkins setup(192.168.0.111:8080)
+    -  name: jenkins setup(localhost:8080)
        win_shell: java -jar jenkins.war
        args:
          executable: cmd
          chdir: 'D:\destros\jenkins\'
-       #become: yes
        register: jenkinslog
 
     -  name: debug
@@ -19,12 +18,11 @@
        
 
 
-    -  name: sonar setup(192.168.0.111:9000)
+    -  name: sonar setup(localhost:9000)
        win_shell: StartSonar.bat
        args:
          executable: cmd
          chdir: 'D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\'
-       #become: yes
        register: sonarlog
 
     -  name: debug

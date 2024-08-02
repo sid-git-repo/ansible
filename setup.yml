@@ -12,7 +12,7 @@
       debug:
         msg: "{{ ansible_facts }}"
 
-    -  name: jenkins setup(192.168.0.111:8080)
+    -  name: jenkins setup(localhost:8080)
        win_command: java -jar jenkins.war
        args:
          executable: cmd
@@ -28,7 +28,7 @@
        
 
 
-    -  name: sonar setup(192.168.0.111:9000)
+    -  name: sonar setup(localhost:9000)
        win_command: D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\StartSonar.bat
        register: sonarlog
        ignore_errors: true
