@@ -19,6 +19,7 @@
          chdir: 'D:\destros\jenkins\'
        #become: yes
        register: jenkinslog
+       ignore_errors: true
 
     -  name: debug
        debug: 
