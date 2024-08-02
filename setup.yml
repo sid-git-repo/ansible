@@ -35,6 +35,7 @@
       #    chdir: 'D:\destros\sonar\sonarqube\sonarqube-10.6.0.92116\bin\windows-x86-64\'
        #become: yes
        register: sonarlog
+       ignore_errors: true
 
     -  name: debug
        debug: 
